@@ -3,6 +3,11 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    max-width: 700px;
+    max-height: 900px;
+    justify-content: center;
+    margin-left: 30rem;
+    margin-top: 50px;
 }
 
 header {
@@ -61,4 +66,9 @@ button {
 
 button:hover {
     background-color: #555;
+}
+
+.hidden{
+    margin-left: 18rem;
+    margin-top: 10rem;
 }
