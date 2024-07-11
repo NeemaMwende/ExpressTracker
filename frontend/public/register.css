@@ -1,10 +1,9 @@
 /* Apply a full-height background color to the body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #ecdfdf;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    
     height: 100vh; /* Full viewport height */
     display: flex; /* Enable flexbox layout */
     align-items: center; /* Center items vertically */
@@ -33,14 +32,26 @@ h1 {
     margin: 20px 0;
 }
 
-.container {
+/* .container {
     width: 100%;
-    max-width: 500px; /* Limit the maximum width of the form */
+    max-width: 500px; 
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10rem;
+    max-width: 500px;
 }
 
 form {
@@ -70,4 +81,15 @@ button {
 
 button:hover {
     background-color: #555;
+}
+
+.small{
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 10rem;
+    margin-top: 15px;
+}
+.small a{
+    list-style-type: none;
+    list-style: none;
 }

@@ -30,6 +30,8 @@ h1 {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
+    margin-top: 10rem;
+    max-width: 500px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -71,4 +73,14 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+.small{
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 10rem;
+    margin-top: 15px;
+}
+.small a{
+    list-style-type: none;
+    list-style: none;
 }

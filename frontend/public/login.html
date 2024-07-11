@@ -7,19 +7,22 @@
     <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-    <header>
-        <h1>Login</h1>
-    </header>
-    <main>
-        <form id="login-form">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit" href="index.html">Login</button>
-        </form>
-        <p>New user? <a href="register.html">Register here</a></p>
-    </main>
+    <div class="container"> 
+        <header>
+            <h1>Login</h1>
+        </header>
+        <main>
+            <form id="login-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" href="index.html">Login</button>
+            </form>
+            <p class="small">New user? <a href="register.html">Register here</a></p>
+        </main>
+    </div>
+    
     <script src="src/js/login.js"></script>
 </body>
 </html>

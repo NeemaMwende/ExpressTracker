@@ -7,21 +7,37 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <header>
-        <h1>Expense Tracker</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="register.html">Register</a>
-            <a href="login.html">Login</a>
-        </nav>
-    </header>
-    <main>
-        <section id="dashboard" class="hidden">
-            <h2>Welcome, <span id="username"></span></h2>
-            <button id="add-expense-btn" href="add_expense.html">Add Expense</button>
-            <ul id="expense-list"></ul>
-        </section>
-    </main>
+    <div class="container">
+        <header>
+            <h1>Expense Tracker</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </header>
+        <main>
+            <section id="welcome-page">
+                <div id="welcome-text">
+                    <h2>Welcome to the Expense Tracker</h2>
+                    <p>Effortlessly manage your finances with our user-friendly Expense Tracker. <br />
+                        Stay on top of your spending, track your expenses, and achieve your financial goals.<br/> 
+                        Whether you're budgeting for personal or business needs, our intuitive platform <br/> 
+                        ensures you have complete control over your financial health. Join us today and take the first step towards smarter financial management.</p>
+                    <h5>Keep track of your expenses efficiently and effectively. Register or log in to get started!</h5>
+                </div>
+                <div id="welcome-image">
+                    <img src="../image.png" alt="Welcome Image">
+                </div>
+            </section>
+            <section id="dashboard" class="hidden">
+                <h2>Welcome, <span id="username"></span></h2>
+                <button id="add-expense-btn" onclick="location.href='add_expense.html'">Add Expense</button>
+                <ul id="expense-list"></ul>
+            </section>
+        </main>
+    </div>
+    
     <script src="src/js/index.js"></script>
 </body>
 </html>

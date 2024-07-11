@@ -1,74 +1,115 @@
+/* General styling for the body and container */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    max-width: 700px;
-    max-height: 900px;
+    display: flex;
     justify-content: center;
-    margin-left: 30rem;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 50rem;
     margin-top: 50px;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header a {
+header h1 {
+    margin: 0;
+}
+
+header nav a {
     color: #fff;
-    margin: 0 15px;
+    margin-left: 15px;
     text-decoration: none;
 }
 
-h1 {
-    text-align: center;
-    margin: 20px 0;
+header nav a:hover {
+    text-decoration: underline;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.expenses {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.expense-card {
-    background-color: #fff;
+main {
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.expense-card h3 {
-    margin-top: 0;
+.hidden {
+    display: none;
 }
 
-.expense-card p {
-    margin: 5px 0;
+#dashboard h2 {
+    margin: 0 0 20px;
 }
 
-button {
+#add-expense-btn {
     background-color: #333;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
-button:hover {
+#add-expense-btn:hover {
     background-color: #555;
 }
 
-.hidden{
-    margin-left: 18rem;
-    margin-top: 10rem;
+#expense-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#expense-list li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Welcome page design */
+#welcome-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+#welcome-text {
+    flex: 1;
+    padding: 20px;
+}
+
+#welcome-image {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    height: 12rem;
+    width: 8rem;
+}
+
+#welcome-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+p{
+    line-height: 40px;
+    margin-left: 40px;
 }

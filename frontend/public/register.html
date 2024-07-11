@@ -7,21 +7,24 @@
     <link rel="stylesheet" href="./register.css">
 </head>
 <body>
-    <header>
-        <h1>Register</h1>
-    </header>
-    <main>
-        <form id="register-form">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Register</button>
-        </form>
-        <p>Already have an account? <a href="login.html">Login here</a></p>
-    </main>
+    <div class="container">
+        <header>
+            <h1>Register</h1>
+        </header>
+        <main>
+            <form id="register-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p class="small">Already have an account? <a href="login.html">Login here</a></p>
+        </main>
+    </div>
+    
     <script src="src/js/register.js"></script>
     <script src="http://127.0.0.1:5500/frontend/public/src/js/register.js"></script>
 
