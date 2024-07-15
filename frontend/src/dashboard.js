@@ -18,14 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <td>${category}</td>
             <td>${date}</td>
             <td>${createdAt}</td>
-            <td><button class="delete-button">Delete</button></td>
         `;
         
         tableBody.appendChild(newRow);
-        
-        newRow.querySelector('.delete-button').addEventListener('click', () => {
-            newRow.remove();
-        });
         
         form.reset();
     });

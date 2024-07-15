@@ -13,7 +13,7 @@
         </div>
         <div class="right-section">
             <div class="settings">
-                <img src="../icons/home.svg" alt="Settings">
+                <img src="../icons/settings.svg" alt="Settings">
                 <div class="tooltip">Settings</div>
             </div>
             <div class="welcome">
@@ -43,9 +43,9 @@
     </nav>
     
     <main>
-        <center style="margin-bottom: 30px;"><p style="color: black;">Expense Tracker Dashboard</p></center>
+        <center style="margin-bottom: 30px;"><p>Welcome to Expense Tracker</p></center>
         <section class="content">
-            <h2>Add Expense</h2>
+            <h2 style="text-align: center;">Add Expense</h2>
             <form id="expense-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -61,8 +61,9 @@
                 
                 <button type="submit">Add Expense</button>
             </form>
+            <br/>
             
-            <h2>Expenses</h2>
+            <h2 style="text-align: center;">Expenses</h2>
             <table id="expense-table">
                 <thead>
                     <tr>
@@ -71,7 +72,6 @@
                         <th>Category</th>
                         <th>Date</th>
                         <th>Created At</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -81,6 +81,6 @@
         </section>
     </main>
 
-    <script src="dashboard.js"></script>
+    <script src="../src/dashboard.js"></script>
 </body>
 </html>
