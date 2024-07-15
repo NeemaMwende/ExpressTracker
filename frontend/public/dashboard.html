@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <img class="hamburger-menu" src="../icons/hamburger-menu.svg" alt="Menu">
+            <img class="dashboard-logo" src="../icons/youtube-logo.svg" alt="Logo">
+        </div>
+        <div class="right-section">
+            <div class="settings">
+                <img src="../icons/home.svg" alt="Settings">
+                <div class="tooltip">Settings</div>
+            </div>
+            <div class="welcome">
+                <span>Welcome, <span id="username">Username</span></span>
+            </div>
+            <button class="sign-out">Sign Out</button>
+        </div>
+    </header>
+    
+    <nav class="sidebar">
+        <div class="sidebar-link">
+            <img src="../icons/home.svg" alt="Home">
+            <div>Home</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="../icons/explore.svg" alt="Explore">
+            <div>Expenses</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="../icons/subscriptions.svg" alt="Subscriptions">
+            <div>Settings</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="../icons/library.svg" alt="Library">
+            <div>Account</div>
+        </div>
+    </nav>
+    
+    <main>
+        <section class="content">
+            <h2>Add Expense</h2>
+            <form id="expense-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+                
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <button type="submit">Add Expense</button>
+            </form>
+            
+            <h2>Expenses</h2>
+            <table id="expense-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Created At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Expenses will be added here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="../src/dashboard.js"></script>
+</body>
+</html>
