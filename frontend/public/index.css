@@ -172,14 +172,24 @@ main {
     text-align: center;
     padding: 20px;
 }
-
 /* Contact section design */
 #contact .section-content {
     margin-top: 30px;
     padding: 20px;
 }
 
-#contact form {
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -204,10 +214,18 @@ main {
     border-radius: 5px;
     cursor: pointer;
 }
-
+textarea{
+    height: 100px;
+}
 #contact button:hover {
     background-color: #555;
 }
+
+.contact-map {
+    flex: 1;
+    border-radius: 50px;
+}
+
 
 /* Footer design */
 footer {
