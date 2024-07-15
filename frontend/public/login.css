@@ -77,10 +77,24 @@ a:hover {
 .small{
     font-size: 12px;
     font-style: italic;
-    margin-left: 10rem;
+    /* margin-left: 10rem; */
     margin-top: 15px;
 }
 .small a{
     list-style-type: none;
     list-style: none;
+}
+.small{
+    font-size: 12px;
+    font-style: italic;
+    /* margin-left: 10rem; */
+    margin-top: 15px;
+}
+.small a{
+    list-style-type: none;
+    list-style: none;
+}
+.bottom{
+    display: flex;
+    gap: 13rem;
 }
