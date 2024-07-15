@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="container">
@@ -12,7 +12,7 @@
             <h1>Expense Tracker</h1>
             <nav>
                 <div class="navone">
-                    <a href="index.html">Home</a>
+                    <a href="#welcome-page">Home</a>
                     <a href="#about">About us</a>
                     <a href="#services">Services</a>
                     <a href="#products">Products</a>
@@ -38,47 +38,94 @@
                     <img src="../image.png" alt="Welcome Image">
                 </div>
             </section>
-        </main>
-            <section id="dashboard" class="hidden">
-                <h2>Welcome, <span id="username"></span></h2>
-                <button id="add-expense-btn" onclick="location.href='add_expense.html'">Add Expense</button>
-                <ul id="expense-list"></ul>
-            </section>
+
             <section id="about">
-                <div>
-                    <h3>About us</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
-                     Aliquam earum nulla quo. Ullam itaque officiis, velit quis illo hic <br/>
-                     assumenda tempora id quos dolores quasi maxime quisquam delectus, ad voluptates.</p>
+                <div class="section-content">
+                    <div class="text">
+                        <h3>About us</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
+                         Aliquam earum nulla quo. Ullam itaque officiis, velit quis illo hic <br/>
+                         assumenda tempora id quos dolores quasi maxime quisquam delectus, ad voluptates.</p>
+                    </div>
+                    <div class="image">
+                        <img src="../about-image.png" alt="About Image">
+                    </div>
                 </div>
             </section>
+
             <section id="products">
-                <div>
-                    <h3>Our Products</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
-                     Aliquam earum nulla quo. Ullam itaque officiis, velit quis illo hic <br/>
-                     assumenda tempora id quos dolores quasi maxime quisquam delectus, ad voluptates.</p>
+                <h3>Our Products</h3>
+                <div class="cards">
+                    <div class="card">
+                        <img src="../product1.png" alt="Product 1">
+                        <h4>Product 1</h4>
+                        <p>Product description.</p>
+                    </div>
+                    <div class="card">
+                        <img src="../product2.png" alt="Product 2">
+                        <h4>Product 2</h4>
+                        <p>Product description.</p>
+                    </div>
+                    <div class="card">
+                        <img src="../product3.png" alt="Product 3">
+                        <h4>Product 3</h4>
+                        <p>Product description.</p>
+                    </div>
+                    <div class="card">
+                        <img src="../product4.png" alt="Product 4">
+                        <h4>Product 4</h4>
+                        <p>Product description.</p>
+                    </div>
+                    <div class="card">
+                        <img src="../product5.png" alt="Product 5">
+                        <h4>Product 5</h4>
+                        <p>Product description.</p>
+                    </div>
+                    <div class="card">
+                        <img src="../product6.png" alt="Product 6">
+                        <h4>Product 6</h4>
+                        <p>Product description.</p>
+                    </div>
+                    <div class="card">
+                        <img src="../product7.png" alt="Product 7">
+                        <h4>Product 7</h4>
+                        <p>Product description.</p>
+                    </div>
+                    <div class="card">
+                        <img src="../product8.png" alt="Product 8">
+                        <h4>Product 8</h4>
+                        <p>Product description.</p>
+                    </div>
+                    <div class="card">
+                        <img src="../product9.png" alt="Product 9">
+                        <h4>Product 9</h4>
+                        <p>Product description.</p>
+                    </div>
                 </div>
             </section>
+
             <section id="services">
-                <div>
+                <div class="section-content">
                     <h3>Services</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
                      Aliquam earum nulla quo. Ullam itaque officiis, velit quis illo hic <br/>
                      assumenda tempora id quos dolores quasi maxime quisquam delectus, ad voluptates.</p>
                 </div>
             </section>
+
             <section id="contact">
-                <div>
+                <div class="section-content">
                     <h3>Contact Us</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
                      Aliquam earum nulla quo. Ullam itaque officiis, velit quis illo hic <br/>
                      assumenda tempora id quos dolores quasi maxime quisquam delectus, ad voluptates.</p>
                 </div>
             </section>
-       
+        </main>
+        <footer>
+            <p>&copy; 2024 Expense Tracker. All rights reserved.</p>
+        </footer>
     </div>
-    
     <script src="src/js/index.js"></script>
 </body>
 </html>
