@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
 }
 
 .container {
@@ -38,12 +39,26 @@ header nav a {
     color: #fff;
     margin-left: 15px;
     text-decoration: none;
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
 }
 
 header nav a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: aqua;
+    transition: calc(0.3s);
 }
-
+nav{
+    display: flex;
+    gap: 26rem;
+}
+nav:hover{
+    color: aqua;
+}
+.navone{
+    justify-content: space-evenly;
+}
 main {
     padding: 20px;
 }
@@ -88,8 +103,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 30px; 
     margin-left: 50px;
+    /* background-image: image("./anime.gif"); */
 }
 
 #welcome-text {
@@ -102,14 +118,18 @@ main {
     padding: 20px;
     text-align: center;
     height: 12rem;
-    width: 8rem;
+    /* width: 8rem; */
 }
 
 #welcome-image img {
-    max-width: 100%;
-    border-radius: 8px;
+    /* max-width: 100%; */
+    border-radius: 50px;
+    width: 40rem;
+    height: 20rem;
+    margin-top: 5px;
 }
 p{
     line-height: 40px;
     margin-left: 40px;
+    margin-top: 10px;
 }

@@ -11,9 +11,17 @@
         <header>
             <h1>Expense Tracker</h1>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="register.html">Register</a>
-                <a href="login.html">Login</a>
+                <div class="navone">
+                    <a href="index.html">Home</a>
+                    <a href="#about">About us</a>
+                    <a href="#services">Services</a>
+                    <a href="#products">Products</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <div>
+                    <a href="register.html">Register</a>
+                    <a href="login.html">Login</a>
+                </div>
             </nav>
         </header>
         <main>
@@ -30,12 +38,45 @@
                     <img src="../image.png" alt="Welcome Image">
                 </div>
             </section>
+        </main>
             <section id="dashboard" class="hidden">
                 <h2>Welcome, <span id="username"></span></h2>
                 <button id="add-expense-btn" onclick="location.href='add_expense.html'">Add Expense</button>
                 <ul id="expense-list"></ul>
             </section>
-        </main>
+            <section id="about">
+                <div>
+                    <h3>About us</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
+                     Aliquam earum nulla quo. Ullam itaque officiis, velit quis illo hic <br/>
+                     assumenda tempora id quos dolores quasi maxime quisquam delectus, ad voluptates.</p>
+                </div>
+            </section>
+            <section id="products">
+                <div>
+                    <h3>Our Products</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
+                     Aliquam earum nulla quo. Ullam itaque officiis, velit quis illo hic <br/>
+                     assumenda tempora id quos dolores quasi maxime quisquam delectus, ad voluptates.</p>
+                </div>
+            </section>
+            <section id="services">
+                <div>
+                    <h3>Services</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
+                     Aliquam earum nulla quo. Ullam itaque officiis, velit quis illo hic <br/>
+                     assumenda tempora id quos dolores quasi maxime quisquam delectus, ad voluptates.</p>
+                </div>
+            </section>
+            <section id="contact">
+                <div>
+                    <h3>Contact Us</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
+                     Aliquam earum nulla quo. Ullam itaque officiis, velit quis illo hic <br/>
+                     assumenda tempora id quos dolores quasi maxime quisquam delectus, ad voluptates.</p>
+                </div>
+            </section>
+       
     </div>
     
     <script src="src/js/index.js"></script>
