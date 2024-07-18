@@ -4,45 +4,68 @@ const jwt = require('jsonwebtoken');
 const { createUser, getUserByUsername, findUserByEmail, findUserByUsername } = require('../models/user');
 // import { createUser, findUserByEmail, findUserByUsername } from '../services/userService.js'; // Import your service functions
 const router = express.Router();
+const db = require('mysql');
 
 router.post('/register', async (req, res) => {
     const { username, email, password } = req.body;
     try {
 
-        // Check if user with the same email already exists
-        // const existingUserByEmail = await findUserByEmail(email);
-        // if (existingUserByEmail) {
-        //     return res.status(400).json({ message: 'User with this email already exists' });
-        // }
+        const users = `SELECT * FROM users WHERE email = ?`
+        //check if user exists
+        db.query(users, [req.body.email], (err,data) => {
+            if(data.length >0) return res.status(400).json("User already exists");
 
-        // // Check if user with the same username already exists
-        // const existingUserByUsername = await findUserByUsername(username);
-        // if (existingUserByUsername) {
-        //     return res.status(400).json({ message: 'Username is already taken' });
-        // }
+            const salt = bcrypt.genSaltSync(10)
+            const hashedPassword = bcrypt.hashSync(req.body.password, salt)
 
-        await createUser(username, email, password);
-        res.status(201).json({ message: 'User created' });
+            const newUser = `INSERT INTO users(username, email, password) VALUES(?)`
+            value = [ req.body.email, req.body.username, hashedPassword ]
+
+            db.query(newUser, [value], (err, data) => {
+                if(err) return res.status(400).json("something went wrong")
+
+                return res.status(200).json("user created successfully")
+            })
+        })
+        // await createUser(username, email, password);
+        // res.status(201).json({ message: 'User created' });
 
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
 });
+
+// router.post('/login', async (req, res) => {
+//     const { username, password } = req.body;
+//     try {
+//         const user = await getUserByUsername(username);
+//         if (!user) return res.status(400).json({ message: 'Invalid username or password' });
+
+//         const isMatch = await bcrypt.compare(password, user.password);
+//         if (!isMatch) return res.status(400).json({ message: 'Invalid username or password' });
+
+//         const token = jwt.sign({ id: user.id, username: user.username }, 'secretkey', { expiresIn: '1h' });
+//         res.status(200).json({ token, username: user.username });
+//     } catch (err) {
+//         res.status(500).json({ message: err.message });
+//     }
+// });
 
 router.post('/login', async (req, res) => {
-    const { username, password } = req.body;
     try {
-        const user = await getUserByUsername(username);
-        if (!user) return res.status(400).json({ message: 'Invalid username or password' });
+        const users = `SELECT * FROM users WHERE email =?`
+        db.query(users, [req.body.email], (err, data) => {
+            if(data.length === 0) return res.status(404).json("User not found!")
 
-        const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch) return res.status(400).json({ message: 'Invalid username or password' });
+            const isPasswordValid = bcrypt.compareSync(req.body.password, data[0].password)
 
-        const token = jwt.sign({ id: user.id, username: user.username }, 'secretkey', { expiresIn: '1h' });
-        res.status(200).json({ token, username: user.username });
-    } catch (err) {
-        res.status(500).json({ message: err.message });
+            if(!isPasswordValid) return res.status(400).json("Invalid email or password!")
+
+                return res.status(200).json("Login Successful")
+        })
+    } catch (error) {
+        res.status(500).json("Internal Server Error");
     }
-});
+})
 
 module.exports = router;
