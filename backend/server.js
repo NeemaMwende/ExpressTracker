@@ -9,7 +9,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static('../frontend/public'));
+app.use('/js', express.static('../frontend/src'));
 
 app.use('/api/expenses', expenseRoutes);
 app.use('/api/auth', authRoutes);
